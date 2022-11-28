@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.0.4' 
+VERSION = '0.0.5' 
 DESCRIPTION = 'BYOST (Build Your Own Spectral Template)'
 LONG_DESCRIPTION = 'Using Pricipal Component Analysis and Gaussian Process Regression\
                      to construct spectral template given 2 conditions.\
