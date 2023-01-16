@@ -201,9 +201,9 @@ def get_single_spectrum_template(df_buildingblock,condition1,condition2,
         condition1_range = df_buildingblock.condition1_range[0]
         condition2_range = df_buildingblock.condition2_range[0]
         if (condition1 < condition1_range[0]) or (condition1 > condition1_range[1]):
-            raise ValueError(f'Warning! condition1 not in modeled range, please input epoch between [{condition1_range[0]},{condition1_range[1]}]')
+             print(f'WARNING! condition1 not in modeled range, please input epoch between [{condition1_range[0]},{condition1_range[1]}]')
         if (condition2 < condition2_range[0]) or (condition2 > condition2_range[1]):
-            raise ValueError(f'condition2 not in supported range, please input condition2 between [{condition2_range[0]},{condition2_range[1]}]')
+             print(f'WARNING! condition2 not in supported range, please input condition2 between [{condition2_range[0]},{condition2_range[1]}]')
     ## set up the input and output
     x1,x2 = condition1,condition2
     ## get pca and predicted PCs from GPR
