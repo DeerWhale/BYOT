@@ -51,18 +51,18 @@ def get_Hsiao_template(epoch):
 
 def get_template(df_buildingblocks,condition1,condition2,
                  PC_select_method = ['GPR_score_threshold',0.2],
-                 return_template_error=False,error_MC_num = 1000,return_MC_spectra=False):
+                 return_template_error=False, error_MC_num = 1000,return_MC_spectra=False):
     """
-    Input:
-        df_buildingblocks: pandas dataframe contains resulting PCA and GPR 
+    input:
+        df_buildingblocks: pandas dataframe contains resulting pca and gpr 
             ** if there is more than 1 wavelength region (df.shape[0]>1), the wavelength must be aranged from 
             blue to red in the dataframe, and has overlap in neighbouring region in order to enable merging **
         condition1: input variable 1, scaler 
         condition2:  input variable 2, scaler 
         
-        ** method of selecting which PCs to keep for template flux construction **
-        PC_select_method = ['method',value]
-            'GPR_score_threshold': keep PCs that has GPR R^2 >= GPR_score_threshold
+        ** method of selecting which pcs to keep for template flux construction **
+        pc_select_method = ['method',value]
+            'gpr_score_threshold': keep pcs that has gpr r^2 >= gpr_score_threshold
             'PCA_variance_pctg_threshold': keep PCs up to the one that has total_variance >= PCA_variance_pctg_threshold
             'fixed_PC_number': keep n (n=fixed_PC_number) first PCs
         
@@ -201,9 +201,9 @@ def get_single_spectrum_template(df_buildingblock,condition1,condition2,
         condition1_range = df_buildingblock.condition1_range[0]
         condition2_range = df_buildingblock.condition2_range[0]
         if (condition1 < condition1_range[0]) or (condition1 > condition1_range[1]):
-            raise ValueError(f'Warning! condition1 not in modeled range, please input epoch between [{condition1_range[0]},{condition1_range[1]}]')
+             print(f'WARNING! condition1 not in modeled range, please input epoch between [{condition1_range[0]},{condition1_range[1]}]')
         if (condition2 < condition2_range[0]) or (condition2 > condition2_range[1]):
-            raise ValueError(f'condition2 not in supported range, please input condition2 between [{condition2_range[0]},{condition2_range[1]}]')
+             print(f'WARNING! condition2 not in supported range, please input condition2 between [{condition2_range[0]},{condition2_range[1]}]')
     ## set up the input and output
     x1,x2 = condition1,condition2
     ## get pca and predicted PCs from GPR
