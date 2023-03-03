@@ -16,11 +16,11 @@ pip install BYOST
 
 ## Quick guide
 
-#### NIR spectral template for type Ia supernova (from Lu2023)
+#### NIR spectral template for type Ia supernova (from [Lu et al. 2023](https://arxiv.org/abs/2211.05998))
 
-If you would like to use the new NIR spectral template for type Ia supernova, please download the data products (NIR_Ia_template_buildingblocks.tar) of Lu2023 from the [CSP data website](https://csp.obs.carnegiescience.edu/data).
+If you would like to use the new NIR spectral template for type Ia supernova, please download the data products (NIR_Ia_template.zip) on the [CSP data website](https://csp.obs.carnegiescience.edu/data).
 
-After you have downloaded buildingblock file "NIR_Ia_template_buildingblocks.pkl", you can run the following in python to get the template with given input phase and sBV values. 
+After you have downloaded and unzip the file, you can run the following in python to get the template with given input phase and sBV values. 
 
 ```
 import BYOST
