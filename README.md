@@ -16,7 +16,7 @@ pip install BYOST
 
 ## Quick guide
 
-#### NIR spectral template for Type Ia Supernovae (from [Lu et al. 2023](https://arxiv.org/abs/2211.05998))
+#### NIR spectral template for Type Ia Supernovae (from [Lu et al. 2023](https://ui.adsabs.harvard.edu/abs/2023ApJ...948...27L/abstract))
 
 If you would like to use the new NIR spectral template for type Ia supernova, please download the data products (NIR_Ia_template.zip) on the [CSP data website](https://csp.obs.carnegiescience.edu/data).
 
